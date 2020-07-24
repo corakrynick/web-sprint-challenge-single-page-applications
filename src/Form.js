@@ -1,12 +1,12 @@
 import React from 'react'
 
 function Form(props) {
-    const {name, size, cheese, pepperoni, sausage, pineapple, special, handleChange, handleSubmit} = props
+    const {name, size, cheese, pepperoni, sausage, pineapple, special, handleChange, handleSubmit, disable,} = props
     return (
         <form onSubmit={handleSubmit}>
             <label>
                 Your Name:
-                <input name='name' value={name} onChange={handleChange}/>
+                <input id="name" name='name' value={name} onChange={handleChange}/>
             </label>
             <label>
                 Choose Your Size:
@@ -19,25 +19,25 @@ function Form(props) {
             </label>
             <label>
                 Extra Cheese
-                <input name='cheese' type='checkbox' checked={cheese} onChange={handleChange}/>
+                <input id='cheese' name='cheese' type='checkbox' checked={cheese} onChange={handleChange}/>
             </label>
             <label>
                 Pepperoni
-                <input name='pepperoni' type='checkbox' checked={pepperoni} onChange={handleChange}/>
+                <input id='pepperoni' name='pepperoni' type='checkbox' checked={pepperoni} onChange={handleChange}/>
             </label>
             <label>
                 Sausage
-                <input name='sausage' type='checkbox' checked={sausage} onChange={handleChange}/>
+                <input id='sausage' name='sausage' type='checkbox' checked={sausage} onChange={handleChange}/>
             </label>
             <label>
                 Pineapple
-                <input name='pineapple' type='checkbox' checked={pineapple} onChange={handleChange}/>
+                <input id='pineapple' name='pineapple' type='checkbox' checked={pineapple} onChange={handleChange}/>
             </label>
             <label>
                 Special Insructions
                 <input name='special' type='textbox' value={special} onChange={handleChange}/>
             </label>
-            <button type='submit' >Place Order Now</button>
+            <button disable='disable' type='submit' >Place Order Now</button>
         </form>
     )
 }
